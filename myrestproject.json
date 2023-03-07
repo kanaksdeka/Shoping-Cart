@@ -1,0 +1,20 @@
+{
+  "wscategories": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    },
+    {
+      "id": 2,
+      "name": "Electronics"
+    },
+    {
+      "id": 3,
+      "name": "Home Appliance"
+    },
+    {
+      "id": 4,
+      "name": "Others"
+    }
+  ]
+}

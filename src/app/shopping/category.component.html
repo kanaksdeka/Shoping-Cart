@@ -1,0 +1,24 @@
+<h4>Manage Categories</h4>
+
+<form>
+  <input name="txtId" [(ngModel)]="frmCtg.id" placeholder="Id" readonly>
+  <input name="txtName" [(ngModel)]="frmCtg.name" placeholder="Name">
+  <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+</form>
+<br>
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th><th>Name</th><th>Actions</th>
+  </tr>
+  <tr *ngIf="categories.length == 0">
+    <th colspan="3">No Data Found</th>
+  </tr>
+  <tr *ngFor="let ctg of categories">
+    <td>{{ctg.id}}</td>
+    <td>{{ctg.name}}</td>
+    <td>
+      <button class="btm btn-danger" (click)="delete(ctg.id)">Delete</button>
+      <button class="btm btn-success" (click)="edit(ctg)">Edit</button>
+    </td>
+  </tr>
+</table>

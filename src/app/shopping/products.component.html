@@ -1,0 +1,22 @@
+<h3>List of Products</h3>
+{{myDate | date:"MM/dd/yyyy"}}
+<br>
+<div>
+  Search: <input [(ngModel)]="queryString">
+</div>
+<br>
+
+<div class="card-deck">
+  <div class="card" *ngFor="let product of products | searchData:queryString:'name'">
+    <div class="card-header bg-warning">
+      <b>{{product.name | uppercase}}</b>
+    </div>
+    <div class="card-body">
+      Price: {{product.price | currency:'GBP'}}
+      <br>Description: {{product.description}}
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" (click)="addToCart(product)">Add To Card</button>
+    </div>
+  </div>
+</div>
